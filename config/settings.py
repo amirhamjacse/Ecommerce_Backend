@@ -57,7 +57,8 @@ INSTALLED_APPS = [
     # Local
     "accounts",
     # Swagger
-    "drf_spectacular"
+    "drf_spectacular",
+    "products",
 ]
 
 MIDDLEWARE = [
