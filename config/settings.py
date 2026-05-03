@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     # Swagger
     "drf_spectacular",
     "products",
+    "orders",
 ]
 
 MIDDLEWARE = [
