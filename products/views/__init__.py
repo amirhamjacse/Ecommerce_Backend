@@ -1,6 +1,9 @@
-from .views import ProductListCreateAPIView, ProductDetailAPIView
-
+from .views import (
+    ProductListCreateAPIView, ProductDetailAPIView,
+    ProductListAPIView
+)
 all = [
     ProductListCreateAPIView,
     ProductDetailAPIView,
+    ProductListAPIView
 ]

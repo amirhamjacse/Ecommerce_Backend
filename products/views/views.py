@@ -51,3 +51,21 @@ class ProductDetailAPIView(APIView):
         product = self.get_object(id)
         product.delete()
         return Response({"message": "Deleted successfully"})
+
+
+
+    
+
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import generics
+from products.models import Product
+from products.serializers import ProductSerializer
+from products.filters import ProductFilter
+
+
+class ProductListAPIView(generics.ListAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+    filter_backends = [DjangoFilterBackend]
+    filterset_class = ProductFilter
