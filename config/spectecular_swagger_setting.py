@@ -37,13 +37,3 @@ SPECTACULAR_SETTINGS = {
     'POSTPROCESSING_HOOKS': [],
 }
 
-
-SPECTACULAR_SETTINGS['COMPONENTS'] = {
-    'securitySchemes': {
-        'BearerAuth': {
-            'type': 'http',
-            'scheme': 'bearer',
-            'bearerFormat': 'JWT',
-        }
-    }
-}
