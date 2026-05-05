@@ -55,7 +55,8 @@ class Order(BaseModel):
 
     total_price = models.DecimalField(max_digits=10, decimal_places=2)
 
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+    status = models.CharField(
+        max_length=20, choices=STATUS_CHOICES, default='pending')
 
 
 class OrderItem(BaseModel):
@@ -64,7 +65,8 @@ class OrderItem(BaseModel):
 
     product = models.ForeignKey('products.Product', on_delete=models.CASCADE)
 
-    variant = models.ForeignKey('products.ProductVariant', on_delete=models.SET_NULL, null=True)
+    variant = models.ForeignKey(
+        'products.ProductVariant', on_delete=models.SET_NULL, null=True)
 
     price = models.DecimalField(max_digits=10, decimal_places=2)
 
